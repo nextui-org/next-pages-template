@@ -17,8 +17,8 @@ This is a template for creating applications using Next.js 13 (pages directory) 
 To create a new project based on this template using `create-next-app`, run the following command:
 
 ```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+npx create-next-app -e https://github.com/nextui-org/next-pages-template
 ```
 ## License
 
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+Licensed under the [MIT license](https://github.com/nextui-org/next-pages-template/blob/main/LICENSE).
