@@ -78,14 +78,7 @@ export const Navbar = () => {
 				</div>
 			</NavbarContent>
 
-			<NavbarContent className="flex w-full gap-3 sm:hidden" justify="end">
-				<Link isExternal href={siteConfig.links.github}>
-					<GithubIcon className="text-default-500" />
-				</Link>
-				<ThemeSwitch />
-			</NavbarContent>
-
-			<NavbarContent className="basis-1/5 sm:basis-full" justify="end">
+      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
 				<NavbarItem className="hidden sm:flex gap-2">
 					<Link isExternal href={siteConfig.links.twitter}>
 						<TwitterIcon className="text-default-500" />
@@ -98,22 +91,30 @@ export const Navbar = () => {
 					</Link>
 					<ThemeSwitch />
 				</NavbarItem>
-				<NavbarItem className="hidden sm:flex">{searchInput}</NavbarItem>
-				<NavbarItem className="hidden sm:flex">
+				<NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+				<NavbarItem className="hidden md:flex">
 					<Button
 						isExternal
 						as={Link}
 						className="text-sm font-normal text-default-600 bg-default-100"
 						href={siteConfig.links.sponsor}
-						startIcon={<HeartFilledIcon className="text-danger" />}
+						startContent={<HeartFilledIcon className="text-danger" />}
 						variant="flat"
 					>
 						Sponsor
 					</Button>
 				</NavbarItem>
-				<NavbarMenuToggle className="sm:hidden" />
 			</NavbarContent>
-			<NavbarMenu>
+
+			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+        <Link isExternal href={siteConfig.links.github}>
+          <GithubIcon className="text-default-500" />
+        </Link>
+        <ThemeSwitch />
+				<NavbarMenuToggle />
+      </NavbarContent>
+
+      <NavbarMenu>
 				{searchInput}
 				<div className="mx-4 mt-2 flex flex-col gap-2">
 					{siteConfig.navMenuItems.map((item, index) => (
