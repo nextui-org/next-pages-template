@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nextui-org/react": "^2.0.12",
+    "@nextui-org/react": "^2.0.13",
     "framer-motion": "^10.15.1",
     "@types/node": "20.4.9",
     "@types/react": "18.2.20",
