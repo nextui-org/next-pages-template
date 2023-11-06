@@ -1,12 +1,16 @@
-import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+
 import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { fontSans, fontMono } from "@/config/fonts";
-import type { AppProps } from "next/app";
+import {useRouter} from 'next/router';
+import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
 	return (
-		<NextUIProvider>
+		<NextUIProvider navigate={router.push}>
 			<NextThemesProvider>
 				<Component {...pageProps} />
 			</NextThemesProvider>
