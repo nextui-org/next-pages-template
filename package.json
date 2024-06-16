@@ -9,7 +9,7 @@
 		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
 	},
 	"dependencies": {
-		"@nextui-org/react": "2.4.1",
+		"@nextui-org/react": "2.4.2",
 		"framer-motion": "~11.1.1",
 		"@types/node": "20.5.7",
 		"@types/react": "18.3.3",
